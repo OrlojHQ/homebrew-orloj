@@ -25,8 +25,10 @@ For running the full stack (server + worker), see the [install script](https://g
 
 ## Maintainers: bumping for a new Orloj release
 
-1. Open `checksums.txt` from the new GitHub release.
-2. Set `version` in `Formula/orlojctl.rb` to the semver (no `v` prefix).
-3. Update the four `sha256` values for `orlojctl_*_{darwin,linux}_{arm64,amd64}.tar.gz`.
+After each [Orloj release](https://github.com/OrlojHQ/orloj/releases):
 
-For automation, configure [GoReleaser Homebrew](https://goreleaser.com/customization/homebrew/) in the `OrlojHQ/orloj` repo to push formula updates to this tap using a token with `contents: write` on `OrlojHQ/homebrew-orloj`.
+1. Open `checksums.txt` from that release’s assets.
+2. Set `version` in `Formula/orlojctl.rb` to the semver (no `v` prefix).
+3. Update the four `sha256` values for `orlojctl_*_{darwin,linux}_{arm64,amd64}.tar.gz` to match `checksums.txt` (or compute with `shasum -a 256` on each tarball).
+
+Commit and push; users run `brew update && brew upgrade orlojctl`.
