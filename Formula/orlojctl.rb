@@ -1,28 +1,28 @@
 class Orlojctl < Formula
   desc "CLI for Orloj, the orchestration runtime for multi-agent AI systems"
   homepage "https://github.com/OrlojHQ/orloj"
-  version "0.2.0"
+  version "0.3.0"
   license "Apache-2.0"
 
   on_macos do
     on_arm do
       url "https://github.com/OrlojHQ/orloj/releases/download/v#{version}/orlojctl_v#{version}_darwin_arm64.tar.gz"
-      sha256 "9bcd24fc2a5ddaf4a54431ab09c0628f83711fb7b9f02804422a61b4e2ee5fbb"
+      sha256 "31ccb4b72ec364482a83d0cbbeecbddd1f806f11c0a65a352ec69466dcb4ae52"
     end
     on_intel do
       url "https://github.com/OrlojHQ/orloj/releases/download/v#{version}/orlojctl_v#{version}_darwin_amd64.tar.gz"
-      sha256 "52e1a71a757325907e08377581cc99dff7983c9d1859a1a49e2acb09d5c3c151"
+      sha256 "dff3e4d6a870f3b287e17258b98b80a31ddb73d47a3dac02c8534466b9f7c54a"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/OrlojHQ/orloj/releases/download/v#{version}/orlojctl_v#{version}_linux_arm64.tar.gz"
-      sha256 "b0c926a6fb8d49217019eae5b5667f1bda1c7b66f6277976912f8896000a1b25"
+      sha256 "56c503e82c3025620406798180c642b49bfb767fc43d7167151bc960da751329"
     end
     on_intel do
       url "https://github.com/OrlojHQ/orloj/releases/download/v#{version}/orlojctl_v#{version}_linux_amd64.tar.gz"
-      sha256 "881d133863a60c8121c2877a6f75d3ecc2bdaf953eae92d43742d8039549c79a"
+      sha256 "c8571034c193052077933d0fc34461007f92e01f10c075f769dfa6deb62ed40e"
     end
   end
 
