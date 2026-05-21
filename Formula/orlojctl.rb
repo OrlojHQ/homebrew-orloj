@@ -5,21 +5,21 @@
 class Orlojctl < Formula
   desc "CLI for Orloj — multi-agent AI orchestration runtime"
   homepage "https://github.com/OrlojHQ/orloj"
-  version "0.16.0"
+  version "0.16.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/OrlojHQ/orloj/releases/download/v0.16.0/orlojctl_v0.16.0_darwin_amd64.tar.gz"
-      sha256 "3c46b0f25b9f87fa032436343175968ac4a63f8e8886b909437f6faacc71fdf6"
+      url "https://github.com/OrlojHQ/orloj/releases/download/v0.16.1/orlojctl_v0.16.1_darwin_amd64.tar.gz"
+      sha256 "533967cff5d74186426cef17e5330302ffea729e3e95e1c937721d280b5d55ae"
 
       define_method(:install) do
         bin.install "orlojctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/OrlojHQ/orloj/releases/download/v0.16.0/orlojctl_v0.16.0_darwin_arm64.tar.gz"
-      sha256 "1329188fb66cb9a31395a4fa58908cdba0428db329118a3c5cb37405c9e29da2"
+      url "https://github.com/OrlojHQ/orloj/releases/download/v0.16.1/orlojctl_v0.16.1_darwin_arm64.tar.gz"
+      sha256 "bf57c7b4ce008c205849ca09afaa97d34baaadf1667f19f35dc9244276f4dff4"
 
       define_method(:install) do
         bin.install "orlojctl"
@@ -29,15 +29,15 @@ class Orlojctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OrlojHQ/orloj/releases/download/v0.16.0/orlojctl_v0.16.0_linux_amd64.tar.gz"
-      sha256 "c63469c47bf9580b18fd97465393018febeafae2ab98331dd0902c28841d9ec8"
+      url "https://github.com/OrlojHQ/orloj/releases/download/v0.16.1/orlojctl_v0.16.1_linux_amd64.tar.gz"
+      sha256 "ab75973abb3162c075b7121ebe46b31fb5a921577d85007bdaa20119a8d985b7"
       define_method(:install) do
         bin.install "orlojctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OrlojHQ/orloj/releases/download/v0.16.0/orlojctl_v0.16.0_linux_arm64.tar.gz"
-      sha256 "9e0e97c3ecee4d0e1342ba1205165960ba8785305a92819ba7ba94e286a6f8ef"
+      url "https://github.com/OrlojHQ/orloj/releases/download/v0.16.1/orlojctl_v0.16.1_linux_arm64.tar.gz"
+      sha256 "b54c5e64dc098ec2b9a1238f8a3c2d453352dc30e9e8a97c689d3636d8e2a94d"
       define_method(:install) do
         bin.install "orlojctl"
       end
